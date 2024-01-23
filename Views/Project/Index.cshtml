@@ -1,0 +1,34 @@
+﻿@using MeyawoPortfolio.Models
+@model List<TblProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Projelerim</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Kategori</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+            <th>GithubLinki</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProjectId</td>
+                <td>@item.Title</td>
+                <td>@item.TblCategory.Name</td>
+                <td><a herf="#" class="btn btn-danger">Sil</a></td>
+                <td><a herf="#" class="btn btn-primary">Güncelle</a></td>
+                <td><a herf="#" class="btn btn-info">Github'da Aç</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a herf="#" class="btn btn-outline-success">+ Yeni Proje Girişi</a>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "CreateProject";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+@*<h2>Yeni Proje Girişi</h2>
+
+    <label>Proje Başlığı</label>
+    <input type="text" class="form-control" style="border:solid"/>
+    <br />
+    <label>Proje Görsel Link</label>
+    <input type="text" class="form-control" style="border:solid"/>
+    <br />
+    <label>Github Linki</label>
+    <input type="text" class="form-control" style="border:solid"/>
+
+    <label>Açıklama</label>
+    <textarea rows="5" type="text" class="form-control" style="border:solid"></textarea>*@
+<h2>Yeni Proje Girişi</h2>
+<form method="post" action="/Project/CreateProject/">
+    <div class="form-group">
+        <label for="projeBasligi">Proje Başlığı</label>
+        <input type="text" id="projeBasligi" class="form-control" style="border:solid" />
+    </div>
+
+    <div class="form-group">
+        <label for="projeGorselLink">Proje Görsel Link</label>
+        <input type="text" id="projeGorselLink" class="form-control" style="border:solid" />
+    </div>
+
+    <div class="form-group">
+        <label for="githubLinki">Github Linki</label>
+        <input type="text" id="githubLinki" class="form-control" style="border:solid" />
+    </div>
+
+    <div class="form-group">
+        <label for="aciklama">Açıklama</label>
+        <textarea id="aciklama" rows="5" class="form-control" style="border:solid"></textarea>
+    </div>
+
+    <button class="btn btn-success" type="submit">Gönder</button>
+</form>
