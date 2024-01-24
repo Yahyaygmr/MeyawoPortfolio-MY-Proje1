@@ -24,10 +24,10 @@
                 <td>@item.Title</td>
                 <td>@item.Icon</td>
                 <td>@item.Url</td>
-                <td><a herf="#" class="btn btn-danger">Sil</a></td>
-                <td><a herf="#" class="btn btn-primary">Güncelle</a></td>
+                <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaId" class="btn btn-primary">Güncelle</a></td>
             </tr>
         }
     </tbody>
 </table>
-<a herf="#" class="btn btn-outline-success">+ Yeni Hesap Ekle</a>
+<a href="/SocialMedia/CreateSocialMedia/" class="btn btn-outline-success">+ Yeni Hesap Ekle</a>

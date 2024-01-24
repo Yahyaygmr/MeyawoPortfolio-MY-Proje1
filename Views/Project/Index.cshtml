@@ -24,11 +24,11 @@
                 <td>@item.ProjectId</td>
                 <td>@item.Title</td>
                 <td>@item.TblCategory.Name</td>
-                <td><a herf="#" class="btn btn-danger">Sil</a></td>
-                <td><a herf="#" class="btn btn-primary">Güncelle</a></td>
-                <td><a herf="#" class="btn btn-info">Github'da Aç</a></td>
+                <td><a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-primary">Güncelle</a></td>
+                <td><a href="@item.ProjectUrl" target="_blank" class="btn btn-info">Github'da Aç</a></td>
             </tr>
         }
     </tbody>
 </table>
-<a herf="#" class="btn btn-outline-success">+ Yeni Proje Girişi</a>
+<a href="/Project/CreateProject/" class="btn btn-outline-success">+ Yeni Proje Girişi</a>

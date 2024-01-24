@@ -15,9 +15,49 @@ namespace MeyawoPortfolio.Controllers
             var values = db.TblProject.ToList();
             return View(values);
         }
+        [HttpGet]
         public ActionResult CreateProject()
         {
+            ViewBag.Categories = new SelectList(db.TblCategory, "CategoryId", "Name");
             return View();
+        }
+        [HttpPost]
+        public ActionResult CreateProject(TblProject tblProject)
+        {
+            if (tblProject.Title == null)
+            {
+                throw new Exception("Formun tamamını doldurun");
+            }
+            db.TblProject.Add(tblProject);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult UpdateProject(int id)
+        {
+            ViewBag.Categories = new SelectList(db.TblCategory, "CategoryId", "Name");
+            var project = db.TblProject.Find(id);
+            return View(project);
+        }
+        [HttpPost]
+        public ActionResult UpdateProject(TblProject tblProject)
+        {
+            var project = db.TblProject.Find(tblProject.ProjectId);
+
+            project.Title = tblProject.Title;
+            project.Description = tblProject.Description;
+            project.ProjectCategory = tblProject.ProjectCategory;
+            project.ProjectUrl = tblProject.ProjectUrl;
+            project.ImageUrl = tblProject.ImageUrl;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteProject(int id)
+        {
+            var project = db.TblProject.Find(id);
+            db.TblProject.Remove(project);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,0 +1,46 @@
+﻿@model MeyawoPortfolio.Models.TblContact
+
+@{
+    ViewBag.Title = "MessageDetail";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Mesaj Detayı</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="font-weight-bold">Gönderen :</p>
+                    <p>@Model.NameSurname</p>
+
+                    <p class="font-weight-bold">Email :</p>
+                    <p>@Model.Email</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="font-weight-bold">Gönderim Tarihi:</p>
+                    <p>@Model.SendDate.ToString()</p>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <p class="font-weight-bold">Mesaj :</p>
+                <p>@Model.Message</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="/Contact/Index/" class="btn btn-primary">< Mesaj Listesine Geri Dön</a>
+        <a href="/Contact/DeleteMessage/@Model.ContactId" class="btn btn-danger">Sil</a>
+        @if (Model.IsRead == false)
+        {
+            <a href="/Contact/MarkAsRead/@Model.ContactId" class="btn btn-warning">Okundu Olarak İşaretle</a>
+        }
+
+    </div>
+   
+</div>
+

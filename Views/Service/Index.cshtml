@@ -1,4 +1,4 @@
-﻿@model List<MeyawoPortfolio.Models.TblService>
+﻿re@model List<MeyawoPortfolio.Models.TblService>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
@@ -24,10 +24,10 @@
                 <td>@item.Title</td>
                 <td>@item.Description</td>
                 <td>@item.ImageUrl</td>
-                <td><a herf="#" class="btn btn-danger">Sil</a></td>
-                <td><a herf="#" class="btn btn-primary">Güncelle</a></td>
+                <td><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Service/UpdateService/@item.ServiceId" class="btn btn-primary">Güncelle</a></td>
             </tr>
         }
     </tbody>
 </table>
-<a herf="#" class="btn btn-outline-success">+ Yeni Hizmet Ekle</a>
+<a href="/Service/CreateService/" class="btn btn-outline-success">+ Yeni Hizmet Ekle</a>
