@@ -19,14 +19,29 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.ContactId</td>
-                <td>@item.NameSurname</td>
-                <td>@item.MessageCategory</td>
-                <td>@item.SendDate</td>
-                <td><a herf="#" class="btn btn-primary">Mesajı Aç</a></td>
-                <td><a herf="#" class="btn btn-info">Mesajı Sil</a></td>
-            </tr>
+            if (item.IsRead == true)
+            {
+                <tr>
+                    <td>@item.ContactId</td>
+                    <td>@item.NameSurname</td>
+                    <td>@item.MessageCategory</td>
+                    <td>@item.SendDate</td>
+                    <td><a href="/Contact/MessageDetail/@item.ContactId" class="btn btn-primary">Mesajı Aç</a></td>
+                    <td><a href="/Contact/DeleteMessage/@item.ContactId" class="btn btn-danger">Mesajı Sil</a></td>
+                </tr>
+            }
+            else
+            {
+                <tr style="font-weight: bold;">
+                    <td>@item.ContactId</td>
+                    <td>@item.NameSurname</td>
+                    <td>@item.MessageCategory</td>
+                    <td>@item.SendDate</td>
+                    <td><a href="/Contact/MessageDetail/@item.ContactId" class="btn btn-primary">Mesajı Aç</a></td>
+                    <td><a href="/Contact/DeleteMessage/@item.ContactId" class="btn btn-danger">Mesajı Sil</a></td>
+                </tr>
+            }
+
         }
     </tbody>
 </table>

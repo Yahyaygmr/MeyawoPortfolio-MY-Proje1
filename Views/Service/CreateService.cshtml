@@ -1,0 +1,30 @@
+﻿@model MeyawoPortfolio.Models.TblService
+
+@{
+    ViewBag.Title = "Yeni Hizmet";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Yeni Hizmet</h2>
+<hr />
+@using (Html.BeginForm("CreateService", "Service", FormMethod.Post))
+{
+    <div class="form-group">
+        <label >Hizmet Başlığı</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", style = "border:solid" })
+    </div>
+
+    <div class="form-group">
+        <label >Hizmet Görsel Link</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", style = "border:solid" })
+    </div>
+
+    <div class="form-group">
+        <label >Açıklama</label>
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control", style = "border:solid" })
+    </div>
+    <a href="/Service/Index/" class="btn btn-primary">< Hizmet Listesi</a>
+    <button class="btn btn-success" type="submit">Ekle</button>
+
+}
+

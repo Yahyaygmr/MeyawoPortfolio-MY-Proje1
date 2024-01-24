@@ -1,27 +1,15 @@
 ﻿@model MeyawoPortfolio.Models.TblProject
 
 @{
-    ViewBag.Title = "CreateProject";
+    ViewBag.Title = "Güncelle";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-@*<h2>Yeni Proje Girişi</h2>
-
-    <label>Proje Başlığı</label>
-    <input type="text" class="form-control" style="border:solid"/>
-    <br />
-    <label>Proje Görsel Link</label>
-    <input type="text" class="form-control" style="border:solid"/>
-    <br />
-    <label>Github Linki</label>
-    <input type="text" class="form-control" style="border:solid"/>
-
-    <label>Açıklama</label>
-    <textarea rows="5" type="text" class="form-control" style="border:solid"></textarea>*@
-<h2>Yeni Proje Girişi</h2>
+<h2>Proje Güncelle</h2>
 <hr />
-@using (Html.BeginForm("CreateProject", "Project", FormMethod.Post))
+@using (Html.BeginForm("UpdateProject", "Project", FormMethod.Post))
 {
+    @Html.HiddenFor(x => x.ProjectId)
     <div class="form-group">
         <label for="projeKKategori">Kategori</label>
         @Html.DropDownListFor(model => model.ProjectCategory, (SelectList)ViewBag.Categories, new { @class = "form-control", style = "border:solid" })
@@ -48,6 +36,6 @@
         @Html.TextAreaFor(x => x.Description, new { @class = "form-control", style = "border:solid" })
     </div>
     <a href="/Project/Index/" class="btn btn-primary">< Proje Listesi</a>
-    <button class="btn btn-success" type="submit">Kaydet</button>
+    <button class="btn btn-success" type="submit">Güncelle</button>
 
 }
