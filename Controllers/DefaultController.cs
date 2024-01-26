@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -37,6 +38,46 @@ namespace MeyawoPortfolio.Controllers
         {
             var values = db.TblService.ToList();
             return PartialView(values);
+        }
+        public PartialViewResult PortfolioPartial()
+        {
+            var values = db.TblProject.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult TestimonialPartial()
+        {
+            var values = db.TblTestimonial.Where(x => x.Status == true).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult FooterPartial()
+        {
+            var values = db.TblSocialMedia.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult ScriptsPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult WantToWorkPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult ContactPartial()
+        {
+            return PartialView();
+        }
+        public FileResult DownloadMyCv()
+        {
+            string filePath = Server.MapPath("/Templates/pdf/ozgecmis.pdf");
+            string fileName = "Yahya Yağmur Cv.pdf";
+            if (System.IO.File.Exists(filePath))
+            {
+                return File(filePath, "application/pdf", fileName);
+            }
+            else
+            {
+                throw new FileNotFoundException("Belirtilen dosya bulunamadı !");
+            }
         }
     }
 }
