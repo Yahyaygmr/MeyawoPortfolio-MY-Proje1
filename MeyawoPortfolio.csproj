@@ -212,9 +212,11 @@
     <Content Include="Templates\meyawo\assets\imgs\analytics.svg" />
     <Content Include="Templates\meyawo\assets\imgs\avatar2.jpg" />
     <Content Include="Templates\meyawo\assets\imgs\avatar3.jpg" />
+    <Content Include="Templates\meyawo\assets\imgs\cart.svg" />
     <Content Include="Templates\meyawo\assets\imgs\folio-1.jpg" />
     <Content Include="Templates\meyawo\assets\imgs\folio-2.jpg" />
     <Content Include="Templates\meyawo\assets\imgs\folio-3.jpg" />
+    <Content Include="Templates\meyawo\assets\imgs\globus-svgrepo-com.svg" />
     <Content Include="Templates\meyawo\assets\imgs\header.jpg" />
     <Content Include="Templates\meyawo\assets\imgs\img-1.jpg" />
     <Content Include="Templates\meyawo\assets\imgs\img-2.jpg" />
@@ -542,6 +544,13 @@
     <Content Include="Views\Default\FeaturePartial.cshtml" />
     <Content Include="Views\Default\AboutPartial.cshtml" />
     <Content Include="Views\Default\ServicePartial.cshtml" />
+    <Content Include="Views\Default\PortfolioPartial.cshtml" />
+    <Content Include="Views\Default\TestimonialPartial.cshtml" />
+    <Content Include="Views\Default\FooterPartial.cshtml" />
+    <Content Include="Views\Default\ScriptsPartial.cshtml" />
+    <Content Include="Views\Default\ContactPartial.cshtml" />
+    <Content Include="Views\Default\WantToWorkPartial.cshtml" />
+    <Content Include="Templates\pdf\ozgecmis.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
