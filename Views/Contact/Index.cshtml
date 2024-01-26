@@ -31,7 +31,7 @@
                         <td>@item.ContactId</td>
                         <td>@item.NameSurname</td>
                         @*<td>@item.MessageCategory</td>*@
-                        <td>@item.SendDate.Value.ToString("dd MMMM yyyy H:HH:mm")</td>
+                        <td>@item.SendDate.Value.ToString("dd MMMM yyyy HH:mm")</td>
                         <td><a href="/Contact/MessageDetail/@item.ContactId" class="btn btn-primary">Mesajı Aç</a></td>
                         <td><a href="/Contact/DeleteMessage/@item.ContactId" class="btn btn-danger">Mesajı Sil</a></td>
                     </tr>
@@ -42,7 +42,7 @@
                         <td>@item.ContactId</td>
                         <td><span class="fa fa-circle mr-3"></span>@item.NameSurname</td>
                         @*<td>@item.MessageCategory</td>*@
-                        <td>@item.SendDate.Value.ToString("dd MMMM yyyy H:HH:mm")</td>
+                        <td>@item.SendDate.Value.ToString("dd MMMM yyyy HH:mm")</td>
                         <td><a href="/Contact/MessageDetail/@item.ContactId" class="btn btn-primary">Mesajı Aç</a></td>
                         <td><a href="/Contact/DeleteMessage/@item.ContactId" class="btn btn-danger">Mesajı Sil</a></td>
                     </tr>

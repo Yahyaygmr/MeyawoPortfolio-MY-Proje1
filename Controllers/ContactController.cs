@@ -12,7 +12,7 @@ namespace MeyawoPortfolio.Controllers
         DbMyPortfolioEntities1 db = new DbMyPortfolioEntities1();
         public ActionResult Index()
         {
-            var values = db.TblContact.ToList();
+            var values = db.TblContact.OrderByDescending(x => x.ContactId).ToList();
             return View(values);
         }
         public ActionResult MessageDetail(int id)
@@ -33,6 +33,20 @@ namespace MeyawoPortfolio.Controllers
             db.TblContact.Remove(message);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult CreateContact(TblContact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                contact.IsRead = false;
+                contact.SendDate = DateTime.Now;
+                contact.MessageCategory = 1;
+                db.TblContact.Add(contact);
+                db.SaveChanges();
+                return RedirectToAction("Index","Default");
+            }
+            return View(contact);
         }
 
     }
