@@ -24,7 +24,7 @@
 {
     <div class="form-group">
         <label for="projeKKategori">Kategori</label>
-        @Html.DropDownListFor(model => model.ProjectCategory, (SelectList)ViewBag.Categories, new { @class = "form-control", style = "border:solid" })
+        @Html.DropDownListFor(x => x.ProjectCategory, (SelectList)ViewBag.Categories, new { @class = "form-control", style = "border:solid" })
 
     </div>
 
@@ -45,7 +45,7 @@
 
     <div class="form-group">
         <label for="aciklama">Açıklama</label>
-        @Html.TextAreaFor(x => x.Description, new { @class = "form-control", style = "border:solid" })
+        @Html.TextAreaFor(x => x.Description,4,1, new { @class = "table table-bordered", style = "border:solid" })
     </div>
     <a href="/Project/Index/" class="btn btn-primary">< Proje Listesi</a>
     <button class="btn btn-success" type="submit">Kaydet</button>

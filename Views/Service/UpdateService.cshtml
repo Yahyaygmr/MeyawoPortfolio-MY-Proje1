@@ -22,7 +22,7 @@
 
     <div class="form-group">
         <label>Açıklama</label>
-        @Html.TextAreaFor(x => x.Description, new { @class = "form-control", style = "border:solid" })
+        @Html.TextAreaFor(x => x.Description,4,1, new { @class = "table table-bordered", style = "border:solid" })
     </div>
     <a href="/Service/Index/" class="btn btn-primary">< Hizmet Listesi</a>
     <button class="btn btn-success" type="submit">Güncelle</button>
