@@ -16,10 +16,12 @@
                     <p>
                         @item.Description
                     </p>
-                    @using (Html.BeginForm("DownloadMyCv", "Default"))
-                    {
-                        <button type="submit" class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
-                    }
+                    @*
+                        @using (Html.BeginForm("DownloadMyCv", "Default"))
+                        {
+                            <button type="submit" class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                        }*@
+                    <a href="~/Templates/pdf/ozgecmis.pdf" download="Yahya Yağmur Cv.pdf" class="btn-rounded btn btn-outline-primary mt-4">Cvmi İndir</a>
 
                 </div>
             </div><!-- end of about wrapper -->
