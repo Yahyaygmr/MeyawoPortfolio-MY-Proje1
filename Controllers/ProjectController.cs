@@ -18,7 +18,7 @@ namespace MeyawoPortfolio.Controllers
         [HttpGet]
         public ActionResult CreateProject()
         {
-            ViewBag.Categories = new SelectList(db.TblCategory, "CategoryId", "Name");
+            ViewBag.Categories = GetCategories();
             return View();
         }
         [HttpPost]
@@ -35,7 +35,7 @@ namespace MeyawoPortfolio.Controllers
         [HttpGet]
         public ActionResult UpdateProject(int id)
         {
-            ViewBag.Categories = new SelectList(db.TblCategory, "CategoryId", "Name");
+            ViewBag.Categories = GetCategories();
             var project = db.TblProject.Find(id);
             return View(project);
         }
@@ -59,5 +59,22 @@ namespace MeyawoPortfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public SelectList GetCategories()
+        {
+            return new SelectList(db.TblCategory, "CategoryId", "Name");
+        }
+
+        //Hocanın kategorileri getirmek için kullandığı select list
+        //public List<SelectListItem> GetCategoriesList()
+        //{
+        //    List<SelectListItem> values = (from x in db.TblCategory.ToList()
+        //                               select new SelectListItem
+        //                               {
+        //                                   Text = x.Name,
+        //                                   Value = x.CategoryId.ToString()
+        //                               }).ToList();
+        //    return values;
+        //}
+        //Controller tarafınde (List<SelectListItem>)Viewbag.Categories
     }
 }
