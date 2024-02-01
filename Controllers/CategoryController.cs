@@ -45,8 +45,11 @@ namespace MeyawoPortfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteCategory()
+        public ActionResult DeleteCategory(int id)
         {
+            var cetegory = db.TblCategory.Find(id);
+            db.TblCategory.Remove(cetegory);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
     }

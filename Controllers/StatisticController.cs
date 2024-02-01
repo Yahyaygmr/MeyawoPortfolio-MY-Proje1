@@ -16,12 +16,18 @@ namespace MeyawoPortfolio.Controllers
 
             ViewBag.categoryCount = db.TblCategory.Count();
             ViewBag.projectCount = db.TblProject.Count();
-            ViewBag.MessageCount = db.TblContact.Count();
-            ViewBag.FlutterProjectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
-            ViewBag.isReadCount = db.TblContact.Where(x=> x.IsRead == false).Count();
+            ViewBag.messageCount = db.TblContact.Count();
+            ViewBag.flutterProjectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
+            ViewBag.isReadCount = db.TblContact.Where(x => x.IsRead == false).Count();
             //ViewBag.lastProject = db.TblProject.OrderByDescending(x => x.ProjectId).First();
             ViewBag.lastProject = db.LastProjectName().FirstOrDefault();
-            return View();
+
+            ViewBag.serviceCount = db.TblService.Count();
+            ViewBag.socialMedias = db.TblSocialMedia.Count();
+            ViewBag.testimonials = db.TblTestimonial.Count();
+            ViewBag.csharpProcectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
+
+                return View();
         }
     }
 }

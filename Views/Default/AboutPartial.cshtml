@@ -16,12 +16,12 @@
                     <p>
                         @item.Description
                     </p>
-                    @*
+                    @* //Bu kısım Cv indirmek için Cotrollerda oluşturduğum metodla System.IO kütüphanesini kuallanır
                         @using (Html.BeginForm("DownloadMyCv", "Default"))
                         {
                             <button type="submit" class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
                         }*@
-                    <a href="~/Templates/pdf/ozgecmis.pdf" download="Yahya Yağmur Cv.pdf" class="btn-rounded btn btn-outline-primary mt-4">Cvmi İndir</a>
+                    <a href="~/Templates/pdf/ozgecmis.pdf" download="Yahya Yağmur Cv.pdf" class="btn-rounded btn btn-outline-primary mt-4">Cv mi İndir</a>
 
                 </div>
             </div><!-- end of about wrapper -->
