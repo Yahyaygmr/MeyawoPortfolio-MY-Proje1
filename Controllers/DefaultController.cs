@@ -66,18 +66,20 @@ namespace MeyawoPortfolio.Controllers
         {
             return PartialView();
         }
-        public FileResult DownloadMyCv()
-        {
-            string filePath = Server.MapPath("/Templates/pdf/ozgecmis.pdf");
-            string fileName = "Yahya Yağmur Cv.pdf";
-            if (System.IO.File.Exists(filePath))
-            {
-                return File(filePath, "application/pdf", fileName);
-            }
-            else
-            {
-                throw new FileNotFoundException("Belirtilen dosya bulunamadı !");
-            }
-        }
+
+        //Cv indirme işlemini system.IO ile yapar
+        //public FileResult DownloadMyCv()
+        //{
+        //    string filePath = Server.MapPath("/Templates/pdf/ozgecmis.pdf");
+        //    string fileName = "Yahya Yağmur Cv.pdf";
+        //    if (System.IO.File.Exists(filePath))
+        //    {
+        //        return File(filePath, "application/pdf", fileName);
+        //    }
+        //    else
+        //    {
+        //        throw new FileNotFoundException("Belirtilen dosya bulunamadı !");
+        //    }
+        //}
     }
 }

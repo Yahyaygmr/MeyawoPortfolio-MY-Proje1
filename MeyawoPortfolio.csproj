@@ -133,6 +133,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\FutureController.cs" />
@@ -556,6 +557,7 @@
     <Content Include="Views\Default\WantToWorkPartial.cshtml" />
     <Content Include="Templates\pdf\ozgecmis.pdf" />
     <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
