@@ -1,3 +1,38 @@
+<h1>Projeye Genel Bakış</h1>
+- Bu proje, kullanıcıların hızlı bir şekilde admin panelli bir CV sitesi oluşturmasını sağlayan bir platform sunmaktadır.
+<h3>Bu platformun temel özellikleri şunlardır:</h3>
+
+<h4>Kullanıcı Arayüzü Özellikleri:</h4>
+
+Hakkımda Sayfası: Kullanıcıların kendilerini tanıtabilecekleri ve kariyer hedeflerini paylaşabilecekleri bir alan sunar.
+
+Projelerim Sayfası: Kullanıcıların geçmiş projelerini ve başarılarını sergileyebilecekleri bir platform sağlar.
+
+İletişim Sayfası: Kullanıcıların ziyaretçilerle iletişim kurabileceği bir iletişim formu sunar.
+
+PDF Formatında CV İndirme: Kullanıcıların hazırladıkları CV'yi kolaylıkla PDF formatında indirebilmelerini sağlar.
+
+Kullanıcıya Mesaj Yoluyla Ulaşma: Ziyaretçilerin kullanıcıya mesaj gönderebilmesi ve iletişim kurabilmesini sağlar.
+
+<h4>Admin Paneli Özellikleri:</h4>
+
+Kolay İçerik Yönetimi: Admin paneli aracılığıyla ön yüzde bulunan tüm sayfaların eklenmesi, silinmesi ve güncellenmesi işlemleri kolaylıkla gerçekleştirilebilir.
+
+Gelen Mesaj Yönetimi: Admin, gelen mesajları listeler ve okunmuş/okunmamış olarak sınıflandırabilir, böylece iletişimi daha etkin bir şekilde yönetebilir.
+
+İstatistikler bölümü ile kullanıcılar ve kendisi ile ilgili isatistiklere ulaşabilir.
+
+<h1>Kullanılan Teknolojiler</h1>
+
+ASP.NET MVC (.NET Framework)
+
+Entity Framework
+
+SQL
+
+Bu proje, Db First yaklaşımıyla oluşturulmuştur, böylece veritabanı tasarımı ve geliştirme süreçleri birlikte yönetilir, verimlilik artırılır ve projenin bakımı kolaylaştırılır.
+
+<h1>Proje Görselleri</h1>
 
 ![Ekran görüntüsü 2024-02-02 000742](https://github.com/Yahyaygmr/MeyawoPortfolio-MY-Proje1/assets/101245826/c0563aaf-7142-4f44-a090-193c3e2e7bb3)
 ![Ekran görüntüsü 2024-02-02 000815](https://github.com/Yahyaygmr/MeyawoPortfolio-MY-Proje1/assets/101245826/5c29e139-4561-453c-91da-bbc6077ea2f3)
