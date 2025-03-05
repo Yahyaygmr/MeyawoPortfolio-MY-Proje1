@@ -1,5 +1,5 @@
 <h1>Projeye Genel Bakış</h1>
-- Bu proje, kullanıcıların hızlı bir şekilde admin panelli bir CV sitesi oluşturmasını sağlayan bir platform sunmaktadır.
+- Bu proje, kullanıcıların hızlı bir şekilde admin panelli bir CV sitesi oluşturmasını sağlayan bir yapı sunmaktadır.
 <h3>Bu platformun temel özellikleri şunlardır:</h3>
 
 <h4>Kullanıcı Arayüzü Özellikleri:</h4>
